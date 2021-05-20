@@ -46,6 +46,19 @@ class Post extends Resource
 
             Text::make('Title'),
             Trix::make('Content'),
+
+             // hides the field on both forms
+            Text::make('Field A')->hideWhenCreating(),
+
+             // hides the field on both forms
+            Text::make('Field B')
+                ->hideWhenCreating()
+                ->showOnUpdating(true),
+
+            // this show the field on both forms
+            Text::make('Field C')
+                ->exceptOnForms()
+                ->showOnUpdating(true),
         ];
     }
 

@@ -18,6 +18,10 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->text('content')->nullable();
 
+            $table->string('field_a')->nullable();
+            $table->string('field_b')->nullable();
+            $table->string('field_c')->nullable();
+
             $table->timestamps();
         });
     }
